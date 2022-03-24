@@ -1,0 +1,71 @@
+.page1{
+    background: url(/static/common/images/bgimage.jpg);
+    background-size: cover;
+}
+
+.page2{
+    background-color: black;
+    background-size: cover;
+}
+
+.page3{
+    background-color: black;
+    background-size: cover;
+}
+
+.page4{
+    background-color: black;
+    background-size: cover;
+}
+
+.page5{
+    background-color: black;
+    background-size: cover;
+}
+
+.unlimited{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}
+
+.watch{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+.ready{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    font-size: 27px;
+}
+
+.enjoy{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: right;
+
+}
+
+.watchontv{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: white;
+    text-align: right;
+}
+
+.frequently{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
