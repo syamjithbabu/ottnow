@@ -1,0 +1,1 @@
+web: gunicorn ottnow.wsgi --log-file -
