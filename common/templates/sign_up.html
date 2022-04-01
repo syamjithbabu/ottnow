@@ -13,15 +13,17 @@
 
 
     <link href="/static/common/CSS/sign_up.css" rel="stylesheet">
+    <script src="/static/common/Validation/signup.js"></script>
 
 </head>
 <body>
     <section class="page1" >
 
-        <img src="/static/images/20211209_192521.png" width="160px">
+        <img src="/static/common/images/20211209_192521.png" width="160px">
         <div class="sign" style="margin-top: 100px;">
         <p>Sign Up</p>
-      <form action="/app1/templates/homepage.html">
+      <form action="" method="POST">
+    {% csrf_token %}
     <input type="text" id="name1" name="first_name" placeholder="First Name">
     <span id="name_err1"></span>
     <input type="text" id="name2" name="second_name" placeholder="Second Name">
@@ -35,6 +37,7 @@
     
     <button onclick="return sign()" class="signup">Sign Up</button>
     </form>
+    {{user_msg}}
     </section>
 </body>
 </html>

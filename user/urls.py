@@ -9,3 +9,4 @@ urlpatterns = [
     path('payment_form',views.payment_form,name='payment_form'),
     path('upload_video',views.upload_video,name='upload_video')
 ]
+

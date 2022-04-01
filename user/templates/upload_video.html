@@ -2,38 +2,38 @@
 {% block content %}
 
 <body>
-    <form class="row g-3">
-        <div class="col-md-6">
-          <label for="inputEmail4" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail4">
+    <form class="row g-3" method="POST" action="">
+      {% csrf_token %}
+        <div class="col-6">
+          <label for="inputAddress" class="form-label">Video Title</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="" name="title">
         </div>
-        <div class="col-md-6">
-          <label for="inputPassword4" class="form-label">Password</label>
-          <input type="password" class="form-control" id="inputPassword4">
-        </div>
-        <div class="col-12">
-          <label for="inputAddress" class="form-label">Video Type</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="col-12">
+        <div class="col-6">
           <label for="inputAddress2" class="form-label">Genre</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+          <input type="text" class="form-control" id="inputAddress2" placeholder="" name="genre">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Description</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="" name="description">
         </div>
         <div class="col-md-6">
           <label for="inputCity" class="form-label">Duration</label>
-          <input type="text" class="form-control" id="inputCity">
+          <input type="text" class="form-control" id="inputCity" name="duration">
         </div>
         <div class="col-md-4">
           <label for="inputState" class="form-label">Language</label>
-          <select id="inputState" class="form-select">
+          <select id="inputState" class="form-select" name="language">
             <option selected>Choose...</option>
-            <option>...</option>
+            <option>Malayalam</option>
+            <option>Tamil</option>
+            <option>Hindi</option>
+            <option>English</option>
           </select>
         </div>
        
         <div class="col-md-2">
             <label for="formFileLg" class="form-label">Upload</label>
-            <input class="form-control form-control-lg" id="formFileLg" type="file">
+            <input class="form-control form-control-lg" id="formFileLg" type="file" name="upload">
         </div>
 
         <div class="col-md-2">
@@ -41,6 +41,7 @@
             <input class="btn btn-danger" id="formFileLg" type="submit">
         </div>
       </form>
+      {{upload_msg}}
 </body>
 
 {% endblock %}
