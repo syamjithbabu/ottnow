@@ -5,6 +5,7 @@
 
         
         <div class="row">
+          
            
           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -14,14 +15,17 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
+                
                 <img src="/static/common/images/Picsart_22-01-11_12-28-51-113.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   <h5 style="text-align: left;">Wanda Vision</h5>
                   <p style="text-align: left;">WandaVision is an American television miniseries created by Jac Schaeffer for the streaming service Disney+, based on Marvel Comics featuring the characters Wanda Maximoff / Scarlet Witch and Vision.</p>
                   <a class="btn btn-danger" href="{% url 'user:payment' %}">PLAY</a>
                   <a class="btn btn-success" href="{% url 'user:upload_video' %}">UPLOAD</a>
+                  <a class="btn btn-primary" href="{% url 'user:user_logout' %}">LOGOUT</a>
                 </div>
               </div>
+    
               <div class="carousel-item">
                 <img src="/static/common/images/Loki.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
@@ -29,6 +33,7 @@
                   <p style="text-align: left;">Loki is an American television series created by Michael Waldron for the streaming service Disney+, based on Marvel Comics featuring the character of the same name.</p>
                   <a class="btn btn-danger" href="{% url 'user:payment' %}">PLAY</a>
                   <a class="btn btn-success" href="{% url 'user:upload_video' %}">UPLOAD</a>
+                  <a href="{% url 'user:user_logout' %}" class="btn btn-primary">Logout
                 </div>
               </div>
               <div class="carousel-item">
@@ -38,6 +43,7 @@
                   <p style="text-align: left;">What If...? is an American animated anthology series created by A. C. Bradley for the streaming service Disney+, based on the Marvel Comics series of the same name.</p>
                   <a class="btn btn-danger" href="{% url 'user:payment' %}">PLAY</a>
                   <a class="btn btn-success" href="{% url 'user:upload_video' %}">UPLOAD</a>
+                  <a href="{% url 'user:user_logout' %}" class="btn btn-primary">Logout
                 </div>
               </div>
             </div>
@@ -50,10 +56,10 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-              
-        </div>
-        </div>
+          <a href="{% url 'user:change_password' %}" class="btn btn-primary">Reset Password
 
-       
+          
+              
+          
 
 {% endblock %}

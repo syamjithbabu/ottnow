@@ -9,10 +9,11 @@ class User(models.Model):
     user_age = models.IntegerField()
     user_email = models.CharField(max_length=50)
     user_password = models.CharField(max_length=8)
+    status = models.CharField(max_length=50,default="")
 
     class Meta:
         db_table = 'user_tb'
-        
+
 class AdminMain(models.Model):
     admin_id = models.AutoField(primary_key=True,default="")
     admin_email = models.CharField(max_length=50)

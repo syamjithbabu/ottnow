@@ -136,6 +136,13 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
+EMAIL_HOST_USER = 'syamjithbabu2000@gmail.com'
+EMAIL_HOST_PASSWORD = 'syamjithbabu723'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 

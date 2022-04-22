@@ -51,29 +51,12 @@
           </a>
         </li>
         <li>
-          <a href="#">
-            <i class='bx bx-message' ></i>
-            <span class="links_name">Messages</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-heart' ></i>
-            <span class="links_name">Favrorites</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
+          <a href="{% url 'adminmain:admin_logout' %}">
             <i class='bx bx-cog' ></i>
-            <span class="links_name">Setting</span>
+            <span class="links_name">Logout</span>
           </a>
         </li>
-        <li class="log_out">
-          <a href="#">
-            <i class='bx bx-log-out'></i>
-            <span class="links_name">Log out</span>
-          </a>
-        </li>
+        
       </ul>
   </div>
   <section class="home-section">
@@ -98,7 +81,7 @@
         <div class="box">
           <div class="right-side">
             <div class="box-topic"><a href="{% url 'adminmain:upload_request' %}">Requests</a></div>
-            <div class="number">40,876</div>
+            <div class="number"></div>
             <div class="indicator">
               <i class='bx bx-up-arrow-alt'></i>
               <span class="text">Up from yesterday</span>

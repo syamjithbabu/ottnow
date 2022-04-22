@@ -1,8 +1,10 @@
 from contextlib import redirect_stderr, redirect_stdout
 from django.shortcuts import redirect, render
 
-from common.models import User, AdminMain
+# from common.models import User, AdminMain
 from . models import *
+from django.core.mail import send_mail
+from django.conf import settings
 # Create your views here.
 
 def main_page(request):
@@ -16,12 +18,14 @@ def sign_up(request):
         user_age = request.POST['age']
         user_email = request.POST['user_email']
         user_password = request.POST['password']
+        # user_id = User.objects.get(user_id=request.session['userkey'])
 
         email_exist = User.objects.filter(user_email = user_email).exists()
 
         if not email_exist:
             new_user = User(user_first_name = user_first_name,user_second_name = user_second_name,user_age = user_age,user_email = user_email,user_password = user_password)
             new_user.save()
+            # send_mail("Welcome","your OttNow account has been created..!",settings.EMAIL_HOST_USER,[str(user_id.user_email)])
             user_msg = 'Your account is created...'
         else:
             user_msg = 'This email is already exist...'
